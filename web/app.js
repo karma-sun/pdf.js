@@ -2967,6 +2967,22 @@ function webViewerKeyDown(evt) {
         }
         break;
 
+      case 54: // '6'
+      case 102: // '6' on Numpad of Swedish keyboard
+        pdfViewer.spreadMode = SpreadMode.NONE;
+        handled = true;
+        break;
+      case 55: // '7'
+      case 103: // '7' on Numpad of Swedish keyboard
+        pdfViewer.spreadMode = SpreadMode.ODD;
+        handled = true;
+        break;
+      case 56: // '8'
+      case 104: // '8' on Numpad of Swedish keyboard
+        pdfViewer.spreadMode = SpreadMode.EVEN;
+        handled = true;
+        break;
+
       case 38: // up arrow
         if (isViewerInPresentationMode || PDFViewerApplication.page > 1) {
           PDFViewerApplication.page = 1;
